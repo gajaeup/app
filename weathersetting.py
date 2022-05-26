@@ -36,10 +36,14 @@ else:
 if '눈' in str(weather):
     a.append('눈')
     print(a)
-if '1' in str(weather):
+if '1' in str(Month):
     a.append('눈')
-if '2' in str(weather):
+if '2' in str(Month):
     a.append('눈')
+if '11' in str(Month):
+    a.append('눈')
+if '12' in str(Month):
+    a.append('눈')    
 if '비' in str(weather):
     a.append('비')    
     print(a)
