@@ -33,27 +33,22 @@ else:
     print(temp)
     print(weather.text)
 
-if '눈' in str(weather):
+if '1' in Month or '2' in Month or '11' in Month or '12' in Month:
     a.append('눈')
     print(a)
-if '1' in str(Month):
+    
+elif '눈' in str(weather):
     a.append('눈')
-if '2' in str(Month):
-    a.append('눈')
-if '11' in str(Month):
-    a.append('눈')
-if '12' in str(Month):
-    a.append('눈')    
-if '비' in str(weather):
+    print(a)
+elif '비' in str(weather):
     a.append('비')    
     print(a)
-if '흐림' in str(weather):
+elif '흐림' in str(weather):
     a.append('흐림')
     print(a)
-if '맑음' in str(weather):
+elif '맑음' in str(weather):
     a.append('맑음')
     print(a)
-
 
 
             
