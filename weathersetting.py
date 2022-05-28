@@ -49,7 +49,14 @@ elif '흐림' in str(weather):
 elif '맑음' in str(weather):
     a.append('맑음')
     print(a)
-
+elif '구름많음' in str(weather):
+    a.append('흐림')
+    print(a)
+elif '번개' in str(weather):
+    a.append('비')
+    print(a)
+elif '구름조금' in str(weather):
+    a.append('맑음')
 
             
 
