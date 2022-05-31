@@ -10,13 +10,10 @@
     </style>
   </head>
   <body>
-    <form method="GET" action="result.html">
-      <p>오늘 날씨를 선택해주세요!</p>
+    <form method="GET" action="weathersetting.py">
+      <p>지역을 입력해주세요</p>
       <div>
-          <label><input type="checkbox" name="weather" value="blue"> 맑음</label>
-          <label><input type="checkbox" name="weather" value="red"> 흐림</label>
-          <label><input type="checkbox" name="weather" value="red"> 비</label>
-          <label><input type="checkbox" name="weather" value="red"> 눈</label>
+          <p><label>weather : <input type="text" name="weather"></label></p>
       </div>
       <button class="btn btn-primary" type="submit">제출</button>
       <button class="btn btn-primary" type="reset">초기화</button>
