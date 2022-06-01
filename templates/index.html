@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <body>
+            
+            <form class="grid" action = "/result" method="POST">
+                <center>
+                    {% if area %}
+                   
+                      <h3 style="color: blue;" class="let_space">Hello {{area}}</h3>
+                     
+        
+                  {% endif %}
+                </center>
+
+                <label for = "area">지역을 입력하세요 : </label>
+                <input type ="text" id ="area" area = "area">
+               <center><input type = "submit" name="file_submit"></center>
+            </form>
+        </body>
+    </head>
+</html>
