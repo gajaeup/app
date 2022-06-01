@@ -2,19 +2,20 @@
     <head>
         <body>
             
-            <form class="grid" action = "/result" method="POST">
-                <center>
-                    {% if area %}
-                   
-                      <h3 style="color: blue;" class="let_space">Hello {{area}}</h3>
-                     
-        
-                  {% endif %}
-                </center>
+            <form class="grid" action="/result" method="POST">
 
-                <label for = "area">지역을 입력하세요 : </label>
-                <input type ="text" id ="area" area = "area">
-               <center><input type = "submit" name="file_submit"></center>
+                {% if name %}
+                  <center>
+                    <h3 style="color: blue;" class="let_space">{{name}} {{a}}</h3>
+                  </center> 
+      
+                {% endif %}
+                 
+                <label for="name">Enter your area:</label>
+                <input type="text" id="area" name="name" >
+      
+                <center><input class="file_submit" type="Submit"></center>
+      
             </form>
         </body>
     </head>
