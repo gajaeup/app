@@ -1,12 +1,17 @@
+from flask import Flask, render_template ,request,url_for
+
 from flask import Flask, render_template, url_for, request
 from calendar import month
 from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
+import os
 
 app = Flask(__name__)
 
- 
+@app.route ("/")
+@app.route("/home")
+
 
 @app.route('/')
 @app.route('/home')
@@ -14,6 +19,7 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/result", methods = ['POST', "GET"])
 
 @app.route('/result',methods=['POST', 'GET'])
 def result():
@@ -44,7 +50,7 @@ def result():
         temp = float(temp.strip(' 현재온도°'))
         temp = int(temp)
         weather= soup.find(class_='weather before_slash')
-        
+
 
         print(temp)
         print(weather.text)
@@ -52,7 +58,7 @@ def result():
     if '1' in Month or '2' in Month or '11' in Month or '12' in Month:
         a.append('눈')
         print(a)
-    
+
     elif '눈' in str(weather):
         a.append('눈')
         print(a)
@@ -75,11 +81,9 @@ def result():
         a.append('맑음')
 
 
-    return render_template('index.html', name = name, a = a )
-    
+    return render_template('index.html', name = name, a = a[0] )
 
 
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True) 
