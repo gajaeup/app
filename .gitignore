@@ -1,0 +1,14 @@
+main.css
+main.html
+main.py
+weathersetting.html
+weathersetting.py
+weismu2.png
+WEMU.png
+*.pyc
+__pycache__
+myvenv
+db.sqlite3
+.DS_Store
+test2.py
+test3.py
