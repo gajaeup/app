@@ -1,22 +1,55 @@
-<html>
+<!doctype html>
+<html lang = "ko">
     <head>
-        <body>
-            
-            <form class="grid" action="/result" method="POST">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 
-                {% if name %}
-                  <center>
-                    <h3 style="color: blue;" class="let_space">{{name}} {{a}}</h3>
-                  </center> 
-      
-                {% endif %}
-                 
-                <label for="name">Enter your area:</label>
-                <input type="text" id="area" name="name" >
-      
-                <center><input class="file_submit" type="Submit"></center>
-      
-            </form>
-        </body>
     </head>
+        <body>
+        <section class="layout">
+            <div class="sidebar">
+                <img src ="{{  url_for('static', filename='WEMU1.png')  }}" />
+            </div>
+            <div class="body" style="text-align: center;">
+                <style>
+                    body{
+                      margin: 0;
+                    }
+                </style>
+              
+                <form class="grid" action="/result" method="POST">
+
+                    {% if name %}
+    
+                      <center>
+                        <h3 style="color: #000;" class="let_space">{{name}} {{a}}</h3>
+                        {% if a == '맑음' %}
+                          <iframe width="560" height="500" src="https://wmprogram.netlify.app/taste_settings_sunny.html"  frameborder="0">이 브라우저는 iframe을 지원하지 않습니다</iframe></p>
+    
+                        {% elif a == '흐림' %}
+                          <iframe width="560" height="500" src="https://wmprogram.netlify.app/taste_settings_blur.html"  frameborder="0">이 브라우저는 iframe을 지원하지 않습니다</iframe></p>
+                
+                        {% elif a == '비' %}
+                          <iframe width="560" height="500" src="https://wmprogram.netlify.app/taste_settings_rainy.html"  frameborder="0">이 브라우저는 iframe을 지원하지 않습니다</iframe></p>
+                        
+                        {% elif a == '눈' %}
+                          <iframe width="560" height="500" src="https://wmprogram.netlify.app/taste_settings_snow.html"  frameborder="0">이 브라우저는 iframe을 지원하지 않습니다</iframe></p>
+        
+                        {% endif %}
+                      </center>
+          
+                    {% endif %}
+                  <ol class="content" style="list-style: none;">  
+                    <li class="content__item">
+                        <form action=" " method="POST">
+                          <label for="name" >지역을 입력해주세요 :</label>
+                          <input type="text" id="area" name="name" >
+                          <button  class="button button--mimas" type="submit"><span>입력</span></button>
+                        </form>
+                    </ol>
+              </div>
+          </section>
+        </body>
 </html>
